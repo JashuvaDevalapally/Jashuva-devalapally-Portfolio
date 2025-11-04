@@ -331,10 +331,32 @@ main {
   gap: 15px;
 }
 
+/*-----------------------------------*\
+  #Profile Avatar
+\*-----------------------------------*/
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 30px;
 }
+.avatar-wrapper {
+  width: 140px;
+  height: 200px;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.avatar-wrapper img:hover {
+  transform: scale(1.5);
+}
+
+/*-----------------------------------*\
+  #Profile Info 
+\*-----------------------------------*/
 
 .info-content .name {
   color: var(--white-2);
@@ -439,16 +461,12 @@ main {
 }
 
 .social-item .social-link {
-  color: var(--light-gray-70);
+  color: #1877f2;  /* Facebook blue */
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-
-.social-item .social-link:hover { color: var(--light-gray); }
-
-
-
-
+.social-item .social-link:hover { color: #2196f3; /* Lighter blue on hover */ }
 
 /*-----------------------------------*\
   #NAVBAR
@@ -486,7 +504,6 @@ main {
 .navbar-link:focus { color: var(--light-gray-70); }
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
-
 
 
 
